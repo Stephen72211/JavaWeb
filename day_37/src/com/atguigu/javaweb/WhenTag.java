@@ -14,7 +14,6 @@ public class WhenTag extends SimpleTagSupport {
 	
 	@Override
 	public void doTag() throws JspException, IOException {
-		
 		if(test){
 			ChooseTag chooseTag = (ChooseTag) getParent();
 			boolean flag = chooseTag.isFlag();
