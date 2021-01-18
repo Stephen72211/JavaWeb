@@ -1,0 +1,42 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<atguigu:readerFile src="/WEB-INF/haha.txt"/>
+
+	<br><br>
+	
+	<atguigu:max num2="${param.a }" num1="${param.b }"/>
+	
+	<br>
+	
+	<atguigu:hello value="${param.name }" count="10"/>
+	
+</body>
+</html>
+public static String readFileContent(String fileName) {
+    File file = new File(fileName);
+    BufferedReader reader = null;
+    StringBuffer sbf = new StringBuffer();
+    try {
+        reader = new BufferedReader(new FileReader(file));
+        String tempStr;
+        while ((tempStr = reader.readLine()) != null) {
+            sbf.append(tempStr);
+        }
+        reader.close();
+        return sbf.toString();
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        if (reader != null) {
+            try {
+                reader.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+    }
+    return sbf.toString();
+}
