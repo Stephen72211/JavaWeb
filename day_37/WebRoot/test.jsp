@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
 		<%
 			List<Customer> customers = new ArrayList<Customer>();
 			customers.add(new Customer(1,"AAA"));
