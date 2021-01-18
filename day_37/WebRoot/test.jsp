@@ -42,12 +42,14 @@
 			<atguigu:sonTag/>
 		</atguigu:parentTag>
 		
-		<br>
-		<c:choose>
-			<c:when test="${param.age > 24}">大学毕业</c:when>
-			<c:when test="${param.age > 20}">高中毕业</c:when>
-			<c:otherwise>高中以下</c:otherwise>
-		</c:choose>
+		<br><br>
+		
+		<atguigu:choose>
+			<atguigu:when test="${param.age > 24}">^大学毕业</atguigu:when>
+			<atguigu:when test="${param.age > 20}">^高中毕业</atguigu:when>
+			<atguigu:otherwise>^高中以下</atguigu:otherwise>
+		</atguigu:choose>
+
 		
 </body>
 </html>
