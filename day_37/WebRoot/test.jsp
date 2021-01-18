@@ -3,7 +3,7 @@
 <%@page import="com.atguigu.javaweb.Customer"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="atguigu" uri="http://atguigu.com/myTag/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -34,6 +34,20 @@
 		<atguigu:printUpper time="10">${param.str }</atguigu:printUpper>
 		<br><br>
 		<atguigu:testJspFragment>hello : ${param.name }</atguigu:testJspFragment>
+		<br><br>
+		
+		<!-- 父标签打印 name 到控制台 -->
+		<atguigu:parentTag>
+			<!-- 子标签以父标签的标签体存在.子标签把父标签的 name 属性打印到 JSP 页面上. -->
+			<atguigu:sonTag/>
+		</atguigu:parentTag>
+		
+		<br>
+		<c:choose>
+			<c:when test="${param.age > 24}">大学毕业</c:when>
+			<c:when test="${param.age > 20}">高中毕业</c:when>
+			<c:otherwise>高中以下</c:otherwise>
+		</c:choose>
 		
 </body>
 </html>

@@ -47,6 +47,16 @@
  	</attribute>
  </tag>
  
+ <tag>
+ 	<name>parentTag</name>
+ 	<tag-class>com.atguigu.javaweb.ParentTag</tag-class>
+ 	<body-content>scriptless</body-content>
+ </tag>
  
+  <tag>
+ 	<name>sonTag</name>
+ 	<tag-class>com.atguigu.javaweb.SonTag</tag-class>
+ 	<body-content>empty</body-content>
+ </tag>
  
 </taglib>
