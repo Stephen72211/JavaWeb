@@ -35,11 +35,7 @@ public class ImitateC extends SimpleTagSupport {
 			
 		}
 		
-		
-		
-		
-		
-		
+
 		
 	}
 }
