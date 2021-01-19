@@ -5,7 +5,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="atguigu" uri="http://atguigu.com/myTag/core" %>
-
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -50,6 +50,17 @@
 			<atguigu:otherwise>^高中以下</atguigu:otherwise>
 		</atguigu:choose>
 
-		
+<br><br>
+	<!-- 使用一个 EL 的自定义函数 -->
+	${fn:length(param.name)}
+
+<br><br>
+	<!-- 测试 自定义的 EL 函数 -->
+	${atguigu:concat(param.name1,param.name2)}
+<br><br>
+
+	${fn:toUpperCase(param.name1)}
+	<br><br>
+	${atguigu:substr(param.name1,2,2)}
 </body>
 </html>
