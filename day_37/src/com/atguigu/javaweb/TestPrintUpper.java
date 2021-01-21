@@ -17,7 +17,7 @@ public class TestPrintUpper extends SimpleTagSupport {
 
 	@Override
 	public void doTag() throws JspException, IOException {
-JspFragment bodyContent = getJspBody();
+		JspFragment bodyContent = getJspBody();
 		
 		StringWriter sw = new StringWriter();
 		

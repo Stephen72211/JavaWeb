@@ -11,9 +11,9 @@
   <short-name>atguigu</short-name>
   <uri>http://atguigu.com/myTag/core</uri>
   <tag>
-  	<name>testJspFragment</name>
-  	<tag-class>com.atguigu.javaweb.TestJspFragment</tag-class>
-  	<body-content>scriptless</body-content>
+  	<name>testJspFragment</name> <!-- 标签的名字,在 JSP 页面上使用标签时的名字 -->
+  	<tag-class>com.atguigu.javaweb.TestJspFragment</tag-class> <!-- 标签所在的全类名 -->
+  	<body-content>scriptless</body-content>   <!-- 标签体的类型 -->
    </tag>
  
  <tag>
